@@ -45,7 +45,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=lbfgs
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: A wrapper built around the libLBFGS optimization library by Naoaki Okazaki. The lbfgs
     package implements both the Limited-memory Broyden-Fletcher-Goldfarb-Shanno (L-BFGS)
     and the Orthant-Wise Quasi-Newton Limited-Memory (OWL-QN) optimization algorithms.
@@ -56,7 +56,7 @@ about:
     routines, which is particularly suited for high-dimensional problems.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
