@@ -3,7 +3,7 @@ About r-lbfgs
 
 Home: https://CRAN.R-project.org/package=lbfgs
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-lbfgs-feedstock/blob/master/LICENSE.txt)
 
