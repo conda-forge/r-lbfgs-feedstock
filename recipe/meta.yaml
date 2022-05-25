@@ -1,4 +1,4 @@
-{% set version = '1.2.1' %}
+{% set version = "1.2.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lbfgs_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lbfgs/lbfgs_{{ version }}.tar.gz
-  sha256: c5c9f1afa25f0725f735e21aa42a7634e91888f0a0060db8867b18371c79295d
+  sha256: f8421c8d0fd7b51016b3c13552ed52a72c61fe2d0e634d534a538ec530e8789a
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,14 +46,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=lbfgs
   license: GPL-2.0-or-later
-  summary: A wrapper built around the libLBFGS optimization library by Naoaki Okazaki. The lbfgs
-    package implements both the Limited-memory Broyden-Fletcher-Goldfarb-Shanno (L-BFGS)
-    and the Orthant-Wise Quasi-Newton Limited-Memory (OWL-QN) optimization algorithms.
-    The L-BFGS algorithm solves the problem of minimizing an objective, given its gradient,
-    by iteratively computing approximations of the inverse Hessian matrix. The OWL-QN
-    algorithm finds the optimum of an objective plus the L1-norm of the problem's parameters.
-    The package offers a fast and memory-efficient implementation of these optimization
-    routines, which is particularly suited for high-dimensional problems.
+  summary: A wrapper built around the libLBFGS optimization library by Naoaki Okazaki. The lbfgs package implements both the Limited-memory Broyden-Fletcher-Goldfarb-Shanno (L-BFGS) and the Orthant-Wise Quasi-Newton Limited-Memory (OWL-QN) optimization algorithms. The L-BFGS algorithm solves the problem of minimizing an
+    objective, given its gradient, by iteratively computing approximations of the inverse Hessian matrix. The OWL-QN algorithm finds the optimum of an objective plus the L1-norm of the problem's parameters. The package offers a fast and memory-efficient implementation of these optimization routines, which is particularly
+    suited for high-dimensional problems.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
